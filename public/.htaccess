@@ -1,0 +1,26 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_URI} !^/public/
+#RewriteCond %{REQUEST_FILENAME}/public -f
+#RewriteCond %{HTTP_HOST} ^localhost$ [NC,OR]
+#RewriteCond %{HTTP_HOST} ^localhost$
+#RewriteCond %{REQUEST_URI} !^/login
+RewriteRule ^(.*)$ /PHPMVCFramework/public/index.php?path=$1 [NC,L,QSA]
+#RewriteRule ^abc(.*)$ /PHPMVCFramework/public/index.php?path=$1 [NC,L,QSA]
+
+#RewriteCond %{REQUEST_URI} !^/profile
+#RewriteRule ^(.*)$ /profile?username=$1 
+
+#RewriteRule ^(.*)$ ./public/index.php/$1 [L,QSA]
+#RewriteRule ^(.*)$ index.php/$1 [L]
+
+# Redirect "/customers/em/customers/any-url" to "/customers/any-url"
+#RewriteRule ^(customers)/em/customers/(.+) /$1/$2 [R=301,L]
+
+#RewriteEngine on
+#RewriteCond %{HTTP_HOST} ^mydomain.com$ [NC,OR]
+#RewriteCond %{HTTP_HOST} ^mydomain.com$
+#RewriteCond %{REQUEST_URI} !public/
+#RewriteRule (.*) /public/$1 [L]
+
