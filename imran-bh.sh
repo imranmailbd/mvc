@@ -6,7 +6,7 @@ function evil_laugh() {
     do
         cp a.cpp ${FNAME}${i}.cpp
         git add ${FNAME}${i}.cpp
-        git commit --amend --no-edit -m "hi  codetrace" --date="${DATE} 20:00:00 2022 -0600"
+        git commit --amend --no-edit -m "hi  codetrace" --date="${DATE} 20:00:00 2022 -0500"
         git pull origin master
         git push origin master
     done
